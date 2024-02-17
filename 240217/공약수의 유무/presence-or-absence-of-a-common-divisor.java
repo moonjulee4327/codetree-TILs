@@ -11,15 +11,15 @@ public class Main {
         int a = Integer.parseInt(st.nextToken());
         int b = Integer.parseInt(st.nextToken());
 
-        int cnt = 0;
+        boolean flag = false;
         for (int i = a; i <= b; i++){
             if (1920 % i == 0 && 2880 % i == 0){
-                cnt++;
+                flag = true;
                 break;
             }
         }
 
-        System.out.println(cnt == 1 ? 1 : 0);
+        System.out.println(flag ? 1 : 0);
         br.close();
     }
 }
