@@ -10,7 +10,7 @@ public class Main {
         int x = 1;
         while (true){
             n /= x;
-            if (n < 1){
+            if (n <= 1){
                 break;
             }
             x++;
