@@ -10,7 +10,7 @@ public class Main {
         int cnt = 0;
         while (true){
             int age = Integer.parseInt(br.readLine());
-            if (age >= 30){
+            if (age >= 30 || age < 20){
                 break;
             }
             sum += age;
