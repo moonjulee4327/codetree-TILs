@@ -13,15 +13,13 @@ public class Main {
 
         int cnt = 0;
         for (int i = a; i <= b; i++){
-            if (1920 % i == 0){
+            if (1920 % i == 0 && 2880 % i == 0){
                 cnt++;
-            }
-            if (2880 % i == 0) {
-                cnt++;
+                break;
             }
         }
 
-        System.out.println(cnt == 2 ? 1 : 0);
+        System.out.println(cnt == 1 ? 1 : 0);
         br.close();
     }
 }
