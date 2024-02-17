@@ -7,12 +7,13 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
 
-        int x = 0;
+        int x = 1;
         while (true){
-            n /= ++x;
+            n /= x;
             if (n < 1){
                 break;
             }
+            x++;
         }
         System.out.println(x);
         br.close();
