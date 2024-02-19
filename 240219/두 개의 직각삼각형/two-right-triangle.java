@@ -7,25 +7,16 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
 
-        int front = n;
-        int back = 0;
         for (int i = 0; i < n; i++){
-            for (int j = 0; j < n; j++){
-                if (front <= j){
-                    System.out.print(" ");
-                }else {
-                    System.out.print("*");
-                }
+            for (int j = 0; j < n - i; j++){
+                System.out.print("*");
             }
-            front--;
-            for (int k = 0; k < n; k++){
-                if (back - 1 >= k){
-                    System.out.print(" ");
-                }else {
-                    System.out.print("*");
-                }
+            for (int j = 0; j < 2 * i; j++){
+                System.out.print(" ");
             }
-            back++;
+            for (int j = 0; j < n - i; j++){
+                System.out.print("*");
+            }
             System.out.println();
         }
 
