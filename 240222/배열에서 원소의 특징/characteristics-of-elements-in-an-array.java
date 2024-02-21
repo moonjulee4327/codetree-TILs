@@ -13,17 +13,14 @@ public class Main {
         for (int i = 0; i < 10; i++){
             numArr[i] = Integer.parseInt(st.nextToken());
         }
-
-        int temp = 0;
-        for (int i = 0; i < 10; i++){
-            if (numArr[i] % 3 == 0){
-                temp = i - 1;
+        
+        for (int i = 0; i < 10; i++) {
+            if (numArr[i] % 3 == 0) {
+                System.out.println(numArr[i - 1]);
                 break;
             }
         }
-
-        System.out.println(numArr[temp]);
+        
         br.close();
-
     }
 }
