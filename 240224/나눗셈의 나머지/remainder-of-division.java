@@ -12,9 +12,13 @@ public class Main {
         int b = Integer.parseInt(st.nextToken());
 
         int[] numArr = new int[10];
-        while (a / b > 0) {
-            numArr[a % b] = numArr[a % b] + 1;
-            a /= b;
+        while (true) {
+            if (a > 1){
+                numArr[a % b]++;
+                a /= b;
+            }else {
+                break;
+            }
         }
 
         int result = 0;
