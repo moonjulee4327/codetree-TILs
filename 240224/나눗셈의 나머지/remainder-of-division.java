@@ -10,20 +10,20 @@ public class Main {
 
         int a = Integer.parseInt(st.nextToken());
         int b = Integer.parseInt(st.nextToken());
-        
+
         int[] numArr = new int[10];
-        while (a > 0){
-            numArr[a % b]++;
+        while (a / b > 0) {
+            numArr[a % b] = numArr[a % b] + 1;
             a /= b;
         }
-        
+
         int result = 0;
         for (int i = 0; i < 10; i++){
             result += numArr[i] * numArr[i];
         }
 
         System.out.println(result);
-        
+
         br.close();
     }
 }
