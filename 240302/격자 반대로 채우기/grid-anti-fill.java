@@ -6,18 +6,30 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
-        
+
         int[][] arr = new int[n][n];
         int count = 1;
-        
+
         for (int i = n - 1; i >= 0; i--){
-            if (i % 2 == 0){
-                for (int j = 0; j < n; j++){
-                    arr[j][i] = count++;
+            if (n % 2 == 0){
+                if (i % 2 == 0){
+                    for (int j = 0; j < n; j++){
+                        arr[j][i] = count++;
+                    }
+                }else {
+                    for (int j = n - 1; j >= 0; j--){
+                        arr[j][i] = count++;
+                    }
                 }
             }else {
-                for (int j = n - 1; j >= 0; j--){
-                    arr[j][i] = count++;
+                if (i % 2 == 0){
+                    for (int j = n - 1; j >= 0; j--){
+                        arr[j][i] = count++;
+                    }
+                }else {
+                    for (int j = 0; j < n; j++){
+                        arr[j][i] = count++;
+                    }
                 }
             }
         }
