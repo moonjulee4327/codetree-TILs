@@ -10,7 +10,7 @@ public class Main {
 
         int n = Integer.parseInt(st.nextToken());
         int n2 = Integer.parseInt(st.nextToken());
-        int[][] inputArr = new int[n][2];
+        int[][] inputArr = new int[n2][2];
         int[][] outputArr = new int[n][n];
         int i;
         int j;
