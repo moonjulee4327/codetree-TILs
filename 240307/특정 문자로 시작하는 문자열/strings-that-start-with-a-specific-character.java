@@ -12,7 +12,7 @@ public class Main {
         for (int i = 0; i < n; i++){
             str += br.readLine();
         }
-        
+
         char ch = br.readLine().charAt(0);
         char[] chars = str.toCharArray();
         for (char c : chars){
@@ -21,7 +21,7 @@ public class Main {
             }
         }
 
-        float strLengAvg = str.length() / n;
+        double strLengAvg = str.length() / n + str.length() % n;
         System.out.printf("%d %.2f", cnt, strLengAvg);
 
         br.close();
