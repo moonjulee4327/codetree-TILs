@@ -7,21 +7,22 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
 
-        String str = "";
+        String[] str = new String[n];
         int cnt = 0;
         for (int i = 0; i < n; i++){
-            str += br.readLine();
+            str[i] = br.readLine();
         }
 
         char ch = br.readLine().charAt(0);
-        char[] chars = str.toCharArray();
-        for (char c : chars){
-            if (ch == c){
+        int strLeng = 0;
+        for (int i = 0; i < n; i++){
+            strLeng += str[i].length();
+            if (str[i].charAt(0) == ch){
                 cnt++;
             }
         }
 
-        double strLengAvg = str.length();
+        double strLengAvg = strLeng / n;
         System.out.printf("%d %.2f", cnt, strLengAvg);
 
         br.close();
