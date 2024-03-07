@@ -22,7 +22,7 @@ public class Main {
             }
         }
 
-        double strLengAvg = strLeng / cnt;
+        double strLengAvg = (double) strLeng / cnt;
         System.out.printf("%d %.2f", cnt, strLengAvg);
 
         br.close();
