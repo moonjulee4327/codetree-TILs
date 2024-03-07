@@ -16,13 +16,13 @@ public class Main {
         char ch = br.readLine().charAt(0);
         int strLeng = 0;
         for (int i = 0; i < n; i++){
-            strLeng += str[i].length();
             if (str[i].charAt(0) == ch){
                 cnt++;
+                strLeng += str[i].length();
             }
         }
 
-        double strLengAvg = strLeng / n;
+        double strLengAvg = strLeng / cnt;
         System.out.printf("%d %.2f", cnt, strLengAvg);
 
         br.close();
