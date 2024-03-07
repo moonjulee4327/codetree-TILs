@@ -7,15 +7,15 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String str = br.readLine();
 
-        char[] staCharArr = str.toCharArray();
-        String result = "";
-        for (int i = staCharArr.length - 1; i > 0; i--){
-            if(i % 2 == 1){
-                result += staCharArr[i];
-            }
+        int idx = str.length() - 1;
+        if (str.length() % 2 != 0){
+            idx--;
         }
 
-        System.out.println(result);
+        for (int i = idx; i > 0; i -= 2){
+            System.out.print(str.charAt(i));
+        }
+
         br.close();
     }
 }
