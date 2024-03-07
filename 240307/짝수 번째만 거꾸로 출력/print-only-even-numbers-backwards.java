@@ -9,7 +9,7 @@ public class Main {
 
         char[] staCharArr = str.toCharArray();
         String result = "";
-        for (int i = staCharArr.length; i > 0; i--){
+        for (int i = staCharArr.length - 1; i > 0; i--){
             if(i % 2 == 1){
                 result += staCharArr[i];
             }
