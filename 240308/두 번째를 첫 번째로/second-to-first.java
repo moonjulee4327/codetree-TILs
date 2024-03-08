@@ -8,17 +8,14 @@ public class Main {
 
         String str = br.readLine();
         char repeatChar = str.charAt(1);
-        char[] strArr = str.toCharArray();
 
         for (int i = 1; i < str.length(); i++){
             if (str.charAt(i) == repeatChar){
-                strArr[i] = strArr[0];
+                str = str.replace(str.charAt(i), str.charAt(0));
             }
         }
 
-        for (char c : strArr){
-            System.out.print(c);
-        }
+        System.out.println(str);
 
         br.close();
     }
