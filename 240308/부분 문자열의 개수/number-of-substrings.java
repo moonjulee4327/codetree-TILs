@@ -10,10 +10,7 @@ public class Main {
         String b = br.readLine();
 
         int cnt = 0;
-        for (int i = 0; i < a.length(); i++){
-            if (i == a.length() - 1){
-                break;
-            }
+        for (int i = 0; i < a.length() - 1; i++){
             if (a.charAt(i) == b.charAt(0) && a.charAt(i + 1) == b.charAt(1)){
                 cnt++;
             }
@@ -22,6 +19,5 @@ public class Main {
         System.out.println(cnt);
 
         br.close();
-
     }
 }
