@@ -13,9 +13,9 @@ public class Main {
         String ba = b + a;
 
         if (ab.equals(ba)){
-            System.out.println(true);
+            System.out.println("true");
         }else {
-            System.out.println(false);
+            System.out.println("false");
         }
 
         br.close();
