@@ -9,21 +9,15 @@ public class Main {
         String str = br.readLine();
         String order = br.readLine();
 
-        int idx = 0;
-
         for (int i = 0; i < order.length(); i++){
             if(order.charAt(i) == 'L'){
-                idx--;
+                str = str.substring(1, str.length()) + str.substring(0, 1);
             }else {
-                idx++;
+                str = str.substring(str.length() - 1, str.length()) + str.substring(0, str.length() - 1);
             }
         }
 
-        if (idx > 0){
-            System.out.println(str.substring(str.length() - idx, str.length()) + str.substring(0, str.length() - idx));
-        }else {
-            System.out.println(str.substring(idx * -1, str.length()) + str.substring(0, idx * -1));
-        }
+        System.out.println(str);
 
         br.close();
     }
