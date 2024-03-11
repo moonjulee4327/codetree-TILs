@@ -7,11 +7,11 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         char c = br.readLine().charAt(0);
 
-        if (c == 97){
-            c = 123;
+        if (c == 'a'){
+            System.out.println('z');
+        }else {
+            System.out.println((char) (c - 1));
         }
-
-        System.out.println((char) (c - 1));
 
         br.close();
     }
