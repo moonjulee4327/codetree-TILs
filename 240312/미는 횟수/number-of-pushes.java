@@ -11,11 +11,11 @@ public class Main {
 
         int cnt = -1;
         for (int i = 0; i < str.length(); i++){
-            if (str1.equals(str)){
+            if (str.equals(str1)){
                 cnt = i;
                 break;
             }
-            str1 = str1.substring(str1.length() - 1, str1.length()) + str1.substring(0, str1.length() - 1);
+            str = str.substring(str.length() - 1, str.length()) + str.substring(0, str.length() - 1);
         }
 
         System.out.println(cnt);
